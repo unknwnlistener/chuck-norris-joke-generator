@@ -1,23 +1,27 @@
 import React from "react";
 import { getRandomJokeAsync } from "../cnApi";
+import "../styles/Container.css";
 
-export const MainContent = () => {
+export const MainContent = ({ activePage }) => {
   const [joke, setJoke] = React.useState({});
 
   React.useEffect(() => {
-    getRandomJokeAsync().then((data) => setJoke(data));
-  }, []);
+    if (activePage === "categories") {
+    } else {
+      getRandomJokeAsync().then((data) => setJoke(data));
+    }
+  }, [activePage]);
 
   function newJoke() {
     getRandomJokeAsync().then((data) => setJoke(data));
   }
 
   return (
-    <section className="container">
+    <div className="container">
       <div className="quote">
         <span className="quote-text">{joke.value}</span>
       </div>
       <button onClick={newJoke}>Generate Random</button>
-    </section>
+    </div>
   );
 };
