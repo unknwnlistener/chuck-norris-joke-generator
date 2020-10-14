@@ -14,7 +14,6 @@ export const RandomJoke = () => {
 
   React.useEffect(() => {
     const localJoke = localStorage.getItem("random");
-    console.log("Local Joke", localJoke);
     if (localJoke === "") {
       newJoke();
     } else {
@@ -24,9 +23,9 @@ export const RandomJoke = () => {
   }, []);
 
   return (
-    <div className="container">
+    <>
       <Joke jokeValue={joke}></Joke>
       <button onClick={newJoke}>Generate Random</button>
-    </div>
+    </>
   );
 };

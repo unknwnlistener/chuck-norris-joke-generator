@@ -5,13 +5,20 @@ export const Categories = () => {
   const [categories, setCategories] = React.useState([]);
 
   React.useEffect(() => {
-    getCategoriesListAsync().then((list) => setCategories(list));
+    const localCategories = localStorage.getItem("categories");
+    if (localCategories === "") {
+      getCategoriesListAsync().then((list) => setCategories(list));
+    } else {
+      setCategories(localCategories.split(","));
+    }
   }, []);
 
   return (
-    <div className="container">
+    <div className="categories">
       {categories.map((category) => (
-        <button className="list-item">{category}</button>
+        <button key={category} className="list-item">
+          {category}
+        </button>
       ))}
     </div>
   );

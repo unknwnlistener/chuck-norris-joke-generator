@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 50px);
+  height: calc(99vh - 50px);
 }
 
 .container .quote {
@@ -15,4 +15,18 @@
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 2px 2px 5px black;
+}
+
+.container .categories {
+  height: 90%;
+  width: 70%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+.container .categories > button {
+  font-size: 2em;
 }
