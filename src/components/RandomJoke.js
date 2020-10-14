@@ -25,7 +25,9 @@ export const RandomJoke = () => {
   return (
     <>
       <Joke jokeValue={joke}></Joke>
-      <button onClick={newJoke}>Generate Random</button>
+      <button className="clicker" onClick={newJoke}>
+        Generate Random
+      </button>
     </>
   );
 };

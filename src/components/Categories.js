@@ -1,8 +1,10 @@
 import React from "react";
-import { getCategoriesListAsync } from "../cnApi";
+import { getCategoriesListAsync, getCategoryJokeAsync } from "../cnApi";
+import { Joke } from "./Joke";
 
 export const Categories = () => {
   const [categories, setCategories] = React.useState([]);
+  const [joke, setJoke] = React.useState("");
 
   React.useEffect(() => {
     const localCategories = localStorage.getItem("categories");
@@ -13,13 +15,31 @@ export const Categories = () => {
     }
   }, []);
 
+  const categorySubmit = (event) => {
+    event.preventDefault();
+    const cat = event.target.elements.selectCategory.value;
+    getCategoryJokeAsync(cat).then((joke) => setJoke(joke.value));
+  };
+
   return (
-    <div className="categories">
-      {categories.map((category) => (
-        <button key={category} className="list-item">
-          {category}
-        </button>
-      ))}
+    <div className="categories-container">
+      <div className="categories">
+        <form onSubmit={categorySubmit}>
+          <select name="selectCategory">
+            {categories.map((category) => (
+              <option key={category} className="list-item" value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+          <button className="clicker" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+      <div className="joke-container">
+        <Joke jokeValue={joke}></Joke>
+      </div>
     </div>
   );
 };
