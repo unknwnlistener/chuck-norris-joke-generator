@@ -23,16 +23,3 @@
   background-color: aqua;
   cursor: default;
 }
-
-.search-bar input {
-  font-family: inherit;
-  padding: 0.5em;
-  font-size: inherit;
-  border: 0;
-  border-bottom: 1px solid black;
-  width: 200px;
-}
-.search-bar input:focus {
-  outline: 0;
-  border-bottom: 2px solid black;
-}

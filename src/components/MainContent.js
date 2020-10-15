@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Container.css";
 import { RandomJoke } from "./RandomJoke";
 import { Categories } from "./Categories";
+import { Search } from "./Search";
 
 export const MainContent = ({ activePage }) => {
   return (
@@ -11,7 +12,7 @@ export const MainContent = ({ activePage }) => {
       ) : activePage === "categories" ? (
         <Categories></Categories>
       ) : activePage === "search" ? (
-        <div className="container">Search</div>
+        <Search></Search>
       ) : null}
     </div>
   );

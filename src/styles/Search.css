@@ -1,0 +1,34 @@
+.search-container {
+  position: relative;
+  width: 70%;
+  height: 90%;
+}
+
+.search-bar input {
+  font-family: inherit;
+  padding: 0.5em;
+  font-size: inherit;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 200px;
+  margin-bottom: 1em;
+}
+.search-bar input:focus {
+  outline: 0;
+  border-bottom: 2px solid black;
+}
+
+.search-quotes .quote {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 1px 3px black;
+}
+
+.search-container > .joke-container {
+  align-items: start;
+  justify-content: normal;
+}

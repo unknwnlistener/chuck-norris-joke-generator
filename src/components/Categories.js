@@ -1,6 +1,7 @@
 import React from "react";
 import { getCategoriesListAsync, getCategoryJokeAsync } from "../cnApi";
 import { Joke } from "./Joke";
+import "../styles/Categories.css";
 
 export const Categories = () => {
   const [categories, setCategories] = React.useState([]);
@@ -25,8 +26,8 @@ export const Categories = () => {
     <div className="categories-container">
       <div className="categories">
         <form onSubmit={categorySubmit}>
-          <select name="selectCategory">
-            <option value="none" selected disabled hidden>
+          <select name="selectCategory" defaultValue="none">
+            <option value="none" disabled hidden>
               Select a category
             </option>
             {categories.map((category) => (
