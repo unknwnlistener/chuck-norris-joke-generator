@@ -1,0 +1,14 @@
+.twitter-share-button {
+  float: right;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  color: #55acee;
+  border: 3px solid #55acee;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.twitter-share-button:hover {
+  background-color: #55acee;
+  color: white;
+}
