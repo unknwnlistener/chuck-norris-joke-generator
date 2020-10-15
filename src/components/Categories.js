@@ -26,6 +26,9 @@ export const Categories = () => {
       <div className="categories">
         <form onSubmit={categorySubmit}>
           <select name="selectCategory">
+            <option value="none" selected disabled hidden>
+              Select a category
+            </option>
             {categories.map((category) => (
               <option key={category} className="list-item" value={category}>
                 {category}
@@ -38,7 +41,7 @@ export const Categories = () => {
         </form>
       </div>
       <div className="joke-container">
-        <Joke jokeValue={joke}></Joke>
+        {joke !== "" ? <Joke jokeValue={joke}></Joke> : null}
       </div>
     </div>
   );

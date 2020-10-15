@@ -38,6 +38,10 @@
   margin-right: 0.5em;
 }
 
+.container .categories select:focus {
+  outline: 0;
+}
+
 .container .categories-container .joke-container {
   height: inherit;
   display: flex;
