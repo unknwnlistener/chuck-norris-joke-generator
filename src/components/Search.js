@@ -24,19 +24,17 @@ export const Search = () => {
             autoComplete="off"
           />
           <button type="submit" className="search-submit">
-            <span role="img" aria-label="search">
-              🔍
-            </span>
+            Search
           </button>
         </form>
       </div>
-      <div className="joke-container">
-        {jokes.slice(0, 10).map((joke) => (
-          <div key={joke.id} className="search-quotes">
-            <Joke jokeValue={joke.value}></Joke>
-          </div>
-        ))}
-      </div>
+      {jokes ? (
+        <div className="joke-container">
+          {jokes.slice(0, 10).map((joke) => (
+            <Joke key={joke.id} jokeValue={joke.value}></Joke>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 };

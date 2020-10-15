@@ -1,14 +1,10 @@
 import React from "react";
-import { twitterApi } from "../twitterApi";
+// import { twitterApi } from "../twitterApi";
 import "../styles/Twitter.css";
 
 export const Joke = ({ jokeValue }) => {
-  React.useEffect(() => {
-    twitterApi().then((data) => console.log("Twitter called", data));
-  }, []);
-
   const getTwitterText = (text) => {
-    return `https://twitter.com/intent/tweet?text=${text}`;
+    return `https://twitter.com/intent/tweet?text=${text}&hashtags=ChuckNorris%2CJoke`;
   };
 
   return (

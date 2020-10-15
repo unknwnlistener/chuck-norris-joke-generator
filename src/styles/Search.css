@@ -18,17 +18,21 @@
   border-bottom: 2px solid black;
 }
 
-.search-quotes .quote {
+/* .search-quotes .quote {
   font-size: 1em;
-  margin-bottom: 0.5em;
-  padding: 0.5em;
   width: 100%;
-  border: 1px solid black;
-  border-radius: 5px;
   box-shadow: 2px 1px 3px black;
-}
+} */
 
 .search-container > .joke-container {
   align-items: start;
   justify-content: normal;
+}
+
+.joke-container .quote {
+  font-size: 1em;
+}
+
+.joke-container .quote > a {
+  font-size: 1em;
 }
