@@ -1,0 +1,68 @@
+.container .quote {
+  font-size: 2em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  width: 60%;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-container {
+  padding: 0 0.5rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+  row-gap: 0.25rem;
+}
+
+.icon-button {
+  font-size: 1em;
+  color: #55acee;
+  border: 3px solid #55acee;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  width: auto;
+  height: auto;
+  text-align: center;
+  line-height: 0px;
+  padding: 0.25rem;
+}
+
+.twitter-share-button {
+  color: #55acee;
+  border: 3px solid #55acee;
+}
+
+.twitter-share-button:hover {
+  background-color: #55acee;
+  color: white;
+}
+
+.like-button {
+  color: #ee5555;
+  border: 3px solid #ee5555;
+}
+
+.like-button:hover {
+  background-color: #ee5555;
+  color: white;
+}
+
+.like-button.active {
+  background-color: #ee5555;
+  color: white;
+  border: 3px solid #ee5555;
+}
+
+.like-button.active:hover {
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+}

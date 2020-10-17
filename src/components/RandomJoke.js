@@ -3,28 +3,30 @@ import { Joke } from "./Joke";
 import { getRandomJokeAsync } from "../cnApi";
 
 export const RandomJoke = () => {
-  const [joke, setJoke] = React.useState("");
+  const [joke, setJoke] = React.useState({});
 
   function newJoke() {
     getRandomJokeAsync().then((data) => {
-      setJoke(data.value);
-      localStorage.setItem("random", data.value);
+      let saveObj = { id: data?.id, value: data?.value };
+      setJoke(saveObj);
+      localStorage.setItem("random", JSON.stringify(saveObj));
     });
   }
 
   React.useEffect(() => {
     const localJoke = localStorage.getItem("random");
-    if (localJoke === "") {
+    if (localJoke === null) {
       newJoke();
     } else {
-      setJoke(localJoke);
+      setJoke(JSON.parse(localJoke));
+      // newJoke();
     }
     //eslint-disable-next-line
   }, []);
 
   return (
     <>
-      <Joke jokeValue={joke}></Joke>
+      <Joke jokeId={joke?.id} jokeValue={joke?.value}></Joke>
       <button className="clicker" onClick={newJoke}>
         Generate Random{" "}
         <span role="img" aria-label="shuffle">

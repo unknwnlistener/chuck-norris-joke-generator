@@ -31,7 +31,7 @@ export const Search = () => {
       {jokes ? (
         <div className="joke-container">
           {jokes.slice(0, 10).map((joke) => (
-            <Joke key={joke.id} jokeValue={joke.value}></Joke>
+            <Joke key={joke.id} jokeId={joke.id} jokeValue={joke.value}></Joke>
           ))}
         </div>
       ) : null}

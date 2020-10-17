@@ -42,7 +42,7 @@ export const Categories = () => {
         </form>
       </div>
       <div className="joke-container">
-        {joke !== "" ? <Joke jokeValue={joke}></Joke> : null}
+        {joke !== "" ? <Joke jokeId={joke.id} jokeValue={joke}></Joke> : null}
       </div>
     </div>
   );

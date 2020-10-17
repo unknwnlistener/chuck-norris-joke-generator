@@ -35,6 +35,12 @@ export const Navbar = ({ activePage, setActivePage }) => {
         >
           Search
         </button>
+        <button
+          className={getMenuClass("favourites")}
+          onClick={() => changePage("favourites")}
+        >
+          Favourites
+        </button>
       </div>
       <div className="logo"></div>
     </nav>

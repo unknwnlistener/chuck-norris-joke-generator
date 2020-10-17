@@ -3,6 +3,7 @@ import "../styles/Container.css";
 import { RandomJoke } from "./RandomJoke";
 import { Categories } from "./Categories";
 import { Search } from "./Search";
+import { Favourites } from "./Favourites";
 
 export const MainContent = ({ activePage }) => {
   return (
@@ -13,6 +14,8 @@ export const MainContent = ({ activePage }) => {
         <Categories></Categories>
       ) : activePage === "search" ? (
         <Search></Search>
+      ) : activePage === "favourites" ? (
+        <Favourites></Favourites>
       ) : null}
     </div>
   );

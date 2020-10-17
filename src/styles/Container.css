@@ -7,16 +7,6 @@
   height: calc(99vh - 50px);
 }
 
-.container .quote {
-  font-size: 2em;
-  margin-bottom: 1em;
-  padding: 0.5em;
-  width: 60%;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px black;
-}
-
 .container button {
   font-size: 1em;
 }
