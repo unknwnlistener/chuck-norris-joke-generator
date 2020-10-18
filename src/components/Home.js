@@ -13,7 +13,7 @@ export const Home = () => {
 
   React.useEffect(() => {
     const localCategories = localStorage.getItem("categories");
-    if (localCategories === "") {
+    if ((localCategories === null || localCategories) === "") {
       getCategoriesListAsync().then((list) => setCategories(list));
     } else {
       setCategories(localCategories.split(","));
