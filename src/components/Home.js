@@ -60,7 +60,7 @@ export const Home = () => {
             ))}
           </select>
           <button className="clicker" type="submit">
-            Search
+            Search New
           </button>
         </form>
         <div className="divider">

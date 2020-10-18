@@ -51,13 +51,17 @@ export const Joke = ({ jokeId, jokeValue }) => {
       </div>
       <div className="icon-container">
         <button
-          className={"icon-button " + (isFav ? "active" : "") + " like-button"}
+          className={
+            "icon-button " +
+            (isFav ? "active" : "") +
+            " like-button .transition-links"
+          }
           onClick={toggleFavourite}
         >
           <i className="fa fa-heart"></i>
         </button>
         <a
-          className="icon-button twitter-share-button"
+          className="icon-button twitter-share-button .transition-links"
           href={getTwitterText(jokeValue)}
           target="_blank"
           rel="noreferrer noopener"

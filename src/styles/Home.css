@@ -24,6 +24,7 @@
 
 .categories > form select:focus {
   outline: 0;
+  border: 2px solid black;
 }
 
 .categories > form select > option {

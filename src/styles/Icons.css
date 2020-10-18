@@ -24,7 +24,7 @@
 }
 
 .twitter-share-button {
-  transition: all 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease;
   color: #55acee;
   border: 3px solid #55acee;
 }
@@ -35,7 +35,7 @@
 }
 
 .like-button {
-  transition: all 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease;
   font-size: 0.9em;
   color: #ee5555;
   border: 3px solid #ee5555;
@@ -46,8 +46,12 @@
   color: white;
 }
 
+.like-button:focus {
+  border: 3px solid #ee5555;
+}
+
 .like-button.active {
-  transition: all 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
   background-color: #ee5555;
   color: white;
   border: 3px solid #ee5555;
