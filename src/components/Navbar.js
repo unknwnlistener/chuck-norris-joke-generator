@@ -18,16 +18,10 @@ export const Navbar = ({ activePage, setActivePage }) => {
     <nav className="navbar">
       <div className="menu-items">
         <button
-          className={getMenuClass("random")}
-          onClick={() => changePage("random")}
+          className={getMenuClass("home")}
+          onClick={() => changePage("home")}
         >
-          Random
-        </button>
-        <button
-          className={getMenuClass("categories")}
-          onClick={() => changePage("categories")}
-        >
-          Categories
+          Home
         </button>
         <button
           className={getMenuClass("search")}

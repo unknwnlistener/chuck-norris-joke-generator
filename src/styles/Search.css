@@ -29,10 +29,10 @@
   justify-content: normal;
 }
 
-.joke-container .quote {
+.search-container > .joke-container .quote {
   font-size: 1em;
 }
 
-.joke-container .quote > a {
+.search-container > .joke-container .quote > a {
   font-size: 1em;
 }

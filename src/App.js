@@ -5,7 +5,7 @@ import { Navbar } from "./components/Navbar";
 import { getCategoriesListAsync } from "./cnApi";
 
 function App() {
-  const [active, setActive] = React.useState("random");
+  const [active, setActive] = React.useState("home");
 
   React.useEffect(() => {
     getCategoriesListAsync().then((list) =>

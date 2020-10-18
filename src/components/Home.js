@@ -1,11 +1,15 @@
 import React from "react";
-import { getCategoriesListAsync, getCategoryJokeAsync } from "../cnApi";
+import {
+  getCategoriesListAsync,
+  getCategoryJokeAsync,
+  getRandomJokeAsync,
+} from "../cnApi";
 import { Joke } from "./Joke";
-import "../styles/Categories.css";
+import "../styles/Home.css";
 
-export const Categories = () => {
+export const Home = () => {
   const [categories, setCategories] = React.useState([]);
-  const [joke, setJoke] = React.useState("");
+  const [joke, setJoke] = React.useState({});
 
   React.useEffect(() => {
     const localCategories = localStorage.getItem("categories");
@@ -16,10 +20,29 @@ export const Categories = () => {
     }
   }, []);
 
+  React.useEffect(() => {
+    const localJoke = localStorage.getItem("random");
+    if (localJoke === null) {
+      newJoke();
+    } else {
+      setJoke(JSON.parse(localJoke));
+      // newJoke();
+    }
+    //eslint-disable-next-line
+  }, []);
+
   const categorySubmit = (event) => {
     event.preventDefault();
     const cat = event.target.elements.selectCategory.value;
-    getCategoryJokeAsync(cat).then((joke) => setJoke(joke.value));
+    getCategoryJokeAsync(cat).then((joke) => setJoke(joke));
+  };
+
+  const newJoke = () => {
+    getRandomJokeAsync().then((data) => {
+      let saveObj = { id: data?.id, value: data?.value };
+      setJoke(saveObj);
+      localStorage.setItem("random", JSON.stringify(saveObj));
+    });
   };
 
   return (
@@ -40,9 +63,20 @@ export const Categories = () => {
             Search
           </button>
         </form>
+        <div className="divider">
+          <span>OR</span>
+        </div>
+        <button className="clicker" onClick={newJoke}>
+          Generate Random{" "}
+          <span role="img" aria-label="shuffle">
+            🔀
+          </span>
+        </button>
       </div>
       <div className="joke-container">
-        {joke !== "" ? <Joke jokeId={joke.id} jokeValue={joke}></Joke> : null}
+        {joke != null ? (
+          <Joke jokeId={joke.id} jokeValue={joke.value}></Joke>
+        ) : null}
       </div>
     </div>
   );

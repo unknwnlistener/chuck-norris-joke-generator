@@ -1,15 +1,3 @@
-.container .quote {
-  font-size: 2em;
-  margin-bottom: 1em;
-  padding: 0.5em;
-  width: 60%;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px black;
-  display: flex;
-  justify-content: space-between;
-}
-
 .text-container {
   padding: 0 0.5rem;
 }
@@ -36,6 +24,7 @@
 }
 
 .twitter-share-button {
+  transition: all 0.5s ease;
   color: #55acee;
   border: 3px solid #55acee;
 }
@@ -46,6 +35,8 @@
 }
 
 .like-button {
+  transition: all 0.5s ease;
+  font-size: 0.9em;
   color: #ee5555;
   border: 3px solid #ee5555;
 }
@@ -56,6 +47,7 @@
 }
 
 .like-button.active {
+  transition: all 0.5s ease;
   background-color: #ee5555;
   color: white;
   border: 3px solid #ee5555;

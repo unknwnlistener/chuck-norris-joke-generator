@@ -44,7 +44,7 @@ export const Joke = ({ jokeId, jokeValue }) => {
     //eslint-disable-next-line
   }, [jokeId]);
 
-  return (
+  return jokeValue != null && jokeId != null ? (
     <div className="quote">
       <div className="text-container">
         <span className="quote-text">{jokeValue}</span>
@@ -66,5 +66,7 @@ export const Joke = ({ jokeId, jokeValue }) => {
         </a>
       </div>
     </div>
+  ) : (
+    <p>No Jokes found...</p>
   );
 };

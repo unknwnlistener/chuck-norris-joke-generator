@@ -1,0 +1,39 @@
+.categories-container {
+  height: 90%;
+  width: 70%;
+}
+
+.categories-container .categories {
+  display: flex;
+  justify-content: center;
+}
+
+.categories-container .categories > form {
+  height: inherit;
+}
+
+.categories > form select {
+  font-size: 1em;
+  width: 200px;
+  height: 100%;
+  padding: 0.5em;
+  border-radius: 7px;
+  margin-right: 0.5em;
+  color: #585858;
+}
+
+.categories > form select:focus {
+  outline: 0;
+}
+
+.categories > form select > option {
+  color: black;
+}
+
+.divider > span {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 1em;
+  font-size: 1.5em;
+}
