@@ -54,7 +54,7 @@ export const Joke = ({ jokeId, jokeValue }) => {
           className={
             "icon-button " +
             (isFav ? "active" : "") +
-            " like-button .transition-links"
+            " like-button .transition-links .ripple"
           }
           onClick={toggleFavourite}
         >
