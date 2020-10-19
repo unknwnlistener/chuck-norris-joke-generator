@@ -3,7 +3,9 @@
   width: 70%;
   height: 90%;
 }
-
+.search-bar {
+  margin-bottom: 1em;
+}
 .search-bar input {
   font-family: inherit;
   padding: 0.5em;
@@ -11,11 +13,12 @@
   border: 0;
   border-bottom: 1px solid black;
   width: 200px;
-  margin-bottom: 1em;
+  margin-right: 1em;
 }
 .search-bar input:focus {
   outline: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid black;
+  box-shadow: none;
 }
 
 /* .search-quotes .quote {

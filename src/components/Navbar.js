@@ -36,7 +36,9 @@ export const Navbar = ({ activePage, setActivePage }) => {
           Favourites
         </button>
       </div>
-      <div className="logo"></div>
+      <div className="logo">
+        <div className="logo-text">Chuck Norris Joke Generator</div>
+      </div>
     </nav>
   );
 };
