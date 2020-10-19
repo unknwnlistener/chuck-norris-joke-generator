@@ -34,6 +34,7 @@ export const Home = () => {
   const categorySubmit = (event) => {
     event.preventDefault();
     const cat = event.target.elements.selectCategory.value;
+    if (cat === "none") return;
     getCategoryJokeAsync(cat).then((joke) => setJoke(joke));
   };
 

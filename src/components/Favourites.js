@@ -21,7 +21,7 @@ export const Favourites = () => {
           ))}
         </div>
       ) : (
-        <p>No Jokes to show...</p>
+        <p>No favourites selected...</p>
       )}
     </div>
   );
